@@ -1,5 +1,4 @@
 import './App.css';
-// import TrafficLightContainer from './components/TrafficLightContainer';
 import MainContainer from './components/MainContainer';
 
 const trafficLightsList = [

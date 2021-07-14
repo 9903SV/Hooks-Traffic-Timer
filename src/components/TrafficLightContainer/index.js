@@ -1,4 +1,3 @@
-// import {useState} from 'react'
 import TrafficLight from '../TrafficLight'
 import './index.css'
 
