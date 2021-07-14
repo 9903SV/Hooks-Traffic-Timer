@@ -1,23 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+// import TrafficLightContainer from './components/TrafficLightContainer';
+import MainContainer from './components/MainContainer';
+
+const trafficLightsList = [
+  {
+      id: 0,
+      title: 'stop',
+      color: 'darkred'
+  },
+  {
+      id: 1,
+      title: 'ready',
+      color: 'yellow'
+  },
+  {
+      id: 2,
+      title: 'go',
+      color: 'darkgreen'
+  },
+]
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <MainContainer trafficLightsList={trafficLightsList} />
     </div>
   );
 }

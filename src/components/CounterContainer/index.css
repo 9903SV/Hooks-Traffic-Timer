@@ -1,0 +1,17 @@
+.counter-container {
+    width: 200px;
+    height: 200px;
+    background-color: #000;
+    border: 10px solid darkorange;
+    color: darkorange;
+    display: flex;
+    align-items: center;
+}
+
+.count-element {
+    font-size: 150px;
+}
+
+.respective-sign {
+    font-size: 100px;
+}
