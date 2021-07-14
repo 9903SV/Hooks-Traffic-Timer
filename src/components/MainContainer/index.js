@@ -13,27 +13,33 @@ const MainContainer = props => {
 
     useEffect(() => {
       let interval;
-        if (count>0 && title==='stop') {
+      switch(title) {
+        case 'stop':
+          if (count>0) {
             interval = setInterval(() => {
-                setState(prevState => ({...prevState, count: prevState.count - 1}));
-              }, 1000);
-          
-              return () => {
-                clearInterval(interval);
-              };
-        } else if (count===0 && title==='stop') {
-          clearInterval(interval)
+              setState(prevState => ({...prevState, count: prevState.count - 1}));
+            }, 1000);
+        
+            return () => {
+              clearInterval(interval);
+            };
+          } else {
+            clearInterval(interval)
           setState(prevState => ({...prevState, title: 'go'}))
-        } else if (title === 'go') {
+          }
+          break;
+        case 'go':
           setTimeout(() => {
             setState(prevState => ({...prevState, title: 'ready'}))
           }, 5000)
-        } else if (title === 'ready') {
+          break;
+        default:
           setTimeout(() => {
             setState(prevState => ({...prevState, title: 'stop', count: 8}))
           }, 3000)
-        }
-      }, [title, count]);
+          break;
+      }
+    }, [count, title])
 
     return (
       <div className="main-bg-container">
