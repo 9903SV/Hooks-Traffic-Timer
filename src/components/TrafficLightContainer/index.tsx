@@ -1,13 +1,18 @@
 import TrafficLightElement from '../TrafficLightElement'
 import './index.css'
 
-type TrafficLight = {
+interface TrafficLight {
     id: number,
     title: string,
     color: string
 }
 
-const TrafficLightContainer = (props: {trafficLightsList: TrafficLight[], title: string}) => {
+interface TrafficLightContainerProps {
+    trafficLightsList: TrafficLight[],
+    title: string
+}
+
+const TrafficLightContainer = (props: TrafficLightContainerProps) => {
     const {trafficLightsList, title} = props
 
     return (
