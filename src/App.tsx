@@ -1,7 +1,7 @@
 import './App.css';
 import MainContainer from './components/MainContainer';
 
-type TrafficLight = {
+export interface TrafficLight {
   id: number,
   title: string,
   color: string

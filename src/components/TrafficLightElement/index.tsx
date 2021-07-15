@@ -1,10 +1,5 @@
+import { TrafficLight } from '../../App'
 import './index.css'
-
-interface TrafficLight {
-    id: number,
-    title: string,
-    color: string
-}
 
 interface TrafficLightElementProps {
     eachLight: TrafficLight,

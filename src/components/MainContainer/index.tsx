@@ -1,13 +1,8 @@
 import {useState, useEffect} from 'react'
 import TrafficLightContainer from '../TrafficLightContainer'
 import CounterContainer from '../CounterContainer'
+import { TrafficLight } from '../../App'
 import './index.css'
-
-interface TrafficLight {
-  id: number,
-  title: string,
-  color: string
-}
 
 interface MainContainerProps {
   trafficLightsList: TrafficLight[]
@@ -35,7 +30,7 @@ const MainContainer = (props: MainContainerProps) => {
             };
           } else {
             clearInterval(interval)
-          setState(prevState => ({...prevState, title: 'go'}))
+            setState(prevState => ({...prevState, title: 'go'}))
           }
           break;
         case 'go':
