@@ -3,7 +3,17 @@ import TrafficLightContainer from '../TrafficLightContainer'
 import CounterContainer from '../CounterContainer'
 import './index.css'
 
-const MainContainer = props => {
+interface TrafficLight {
+  id: number,
+  title: string,
+  color: string
+}
+
+interface MainContainerProps {
+  trafficLightsList: TrafficLight[]
+}
+
+const MainContainer = (props: MainContainerProps) => {
 
   const {trafficLightsList} = props
 
@@ -12,7 +22,7 @@ const MainContainer = props => {
     const title = state.title
 
     useEffect(() => {
-      let interval;
+      let interval: any;
       switch(title) {
         case 'stop':
           if (count>0) {

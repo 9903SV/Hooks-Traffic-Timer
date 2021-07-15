@@ -1,7 +1,12 @@
 import Blink from 'react-blink-text';
 import './index.css'
 
-const CounterContainer = props => {
+interface Props {
+    count: number,
+    title: string
+}
+
+const CounterContainer = (props: Props) => {
     const {count, title} = props
     return (
         <div className="counter-container">

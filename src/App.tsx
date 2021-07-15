@@ -1,28 +1,35 @@
 import './App.css';
 import MainContainer from './components/MainContainer';
 
-const trafficLightsList = [
+type TrafficLight = {
+  id: number,
+  title: string,
+  color: string
+}
+
+const trafficLightsList: TrafficLight[] = [
   {
       id: 0,
       title: 'stop',
-      color: 'darkred'
+      color: '#8B0000'
   },
   {
       id: 1,
       title: 'ready',
-      color: 'yellow'
+      color: '#FFFF00'
   },
   {
       id: 2,
       title: 'go',
-      color: 'darkgreen'
+      color: '#006400'
   },
 ]
 
 function App() {
+
   return (
     <div>
-      <MainContainer trafficLightsList={trafficLightsList} />
+      <MainContainer trafficLightsList = {trafficLightsList} />
     </div>
   );
 }
